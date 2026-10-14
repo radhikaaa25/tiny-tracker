@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">hello, sunshine</p>
+        <h1>Tiny Tracker</h1>
+        <p class="date" id="today-label"></p>
+        <div class="streak-pill">
+          <span aria-hidden="true">✦</span>
+          <span id="streak-label">0 day streak</span>
+        </div>
+      </header>
+
+      <section class="card" aria-labelledby="mood-title">
+        <h2 id="mood-title">How are you feeling?</h2>
+        <div class="moods" id="moods"></div>
+      </section>
+
+      <section class="card" aria-labelledby="habits-title">
+        <div class="card-head">
+          <h2 id="habits-title">Today’s little wins</h2>
+          <p class="progress" id="progress">0 / 0</p>
+        </div>
+        <ul class="habits" id="habits"></ul>
+        <form class="add-form" id="add-habit">
+          <input
+            type="text"
+            name="habit"
+            maxlength="40"
+            placeholder="Add a tiny habit…"
+            aria-label="New habit"
+            required
+          />
+          <button type="submit">add</button>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="note-title">
+        <h2 id="note-title">A note for today</h2>
+        <textarea
+          id="note"
+          maxlength="280"
+          placeholder="one sweet thing that happened…"
+        ></textarea>
+      </section>
+
+      <section class="card week-card" aria-labelledby="week-title">
+        <h2 id="week-title">This week</h2>
+        <div class="week" id="week"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
